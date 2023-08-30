@@ -38,7 +38,7 @@ class utils:
                 if word == actualWord:
                     w[i] += 1
         return w
-
+ 
 
     def classifyTweet(self, phrase):
         words = self.clearTweet(phrase)
@@ -50,3 +50,7 @@ class utils:
             if w in self.negativeWords:
                 self.s[2] = self.s[2] + 1
         return self.s
+    
+    def avg(self,w):
+        result = w*(1 / len(w))
+        return result[0]

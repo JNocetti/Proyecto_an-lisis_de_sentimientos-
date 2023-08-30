@@ -13,3 +13,4 @@ s = util.classifyTweet('Excelente en su área, su muerte es una enorme pérdida 
 print("Vector s: ")
 for e in s:
     print(e)
+print(util.avg(w))
