@@ -14,6 +14,11 @@ print("Vector s: ")
 for e in s:
     print(e)
 
-print("avg")
+print("avg de w: ")
 print(util.avg(w))
+print("avg de s: ")
+print(util.avg(s))
+print("Score sentimental:")
+print(util.score(s))
+      
 

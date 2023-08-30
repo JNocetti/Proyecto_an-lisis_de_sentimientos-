@@ -67,4 +67,7 @@ class utils:
         else: # result < (0.5)
             return f"El tweet tiene una calidad mala -->  {r}"
 
-
+    def score(self, s):
+        v = np.array([0,1,-1])
+        return v@s
+    
