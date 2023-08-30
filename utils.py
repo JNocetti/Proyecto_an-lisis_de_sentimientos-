@@ -1,9 +1,10 @@
 import string
+import numpy as np
 class utils:
 
     wordsToCount = []
 
-    s = [0,0,0]
+    s = np.array([0,0,0])
 
     positiveWords = []
     neutralWords = []
@@ -25,25 +26,17 @@ class utils:
             return words
 
     def initializeW(self): #Inicializa el vector w en 0
-        w = []
-        counter = 0
-        for word in self.wordsToCount:
-            w.insert(counter, 0)
-            counter = counter + 1
+        w = np.zeros(len(self.wordsToCount))
         return w
+        
 
-    def stringsCounter(self, phrase): #Devuelve el vector w siendo 1 si la palabra esta contenida en el tweet, 0 sino.
+    def stringsCounter(self, phrase): #Devuelve el vector w donde en cada posicion esta la cantidad de veces que aparece la palabra en el tweet.
         w = self.initializeW()
-        counter = 0
-
         words = self.clearTweet(phrase)
-
-        for word in self.wordsToCount:
-            for actualWord in words:
+        for actualWord in words:
+            for i, word in enumerate(self.wordsToCount):
                 if word == actualWord:
-                    if w[counter] == 0:
-                        w[counter] = 1
-                        counter = counter + 1
+                    w[i] += 1
         return w
 
 
