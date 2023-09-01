@@ -53,7 +53,13 @@ class utils:
                 s[2] = s[2] + 1
         return s
 
-
+    def getAvgTweet(self, r):
+        if 0.5 < r <= 1:
+            return  "El tweet tiene una calidad media -->"
+        elif r > 1:
+            return "El tweet tiene una calidad buena -->"
+        else: # r < (0.5)
+            return "El tweet tiene una calidad mala -->"
 
     def avg(self, w):
         n =  len(w)
@@ -61,13 +67,10 @@ class utils:
         r =  alpha * sum(w)
 
         if 0.5 < r <= 1:
-            print("El tweet tiene una calidad media -->")
             return r
         elif r > 1:
-            print("El tweet tiene una calidad buena -->")
             return r
         else: # r < (0.5)
-            print("El tweet tiene una calidad mala -->")
             return r
 
     def score(self, s):
