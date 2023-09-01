@@ -3,11 +3,6 @@ import numpy as np
 class utils:
 
     wordsToCount = []
-
-    s = np.array([0,0,0])
-
-
-
     positiveWords = []
     neutralWords = []
     negativeWords = []
@@ -27,13 +22,16 @@ class utils:
 
             return words
 
-    def initialize(self): #Inicializa el vector w en 0
+    def initializeW(self): #Inicializa el vector w en 0
         w = np.zeros(len(self.wordsToCount))
         return w
-        
+
+    def initializeS(self): #Inicializa el vector w en 0
+        s = np.zeros(3)
+        return s
 
     def stringsCounter(self, phrase): #Devuelve el vector w donde en cada posicion esta la cantidad de veces que aparece la palabra en el tweet.
-        w = self.initialize()
+        w = self.initializeW()
         words = self.clearTweet(phrase)
         for actualWord in words:
             for i, word in enumerate(self.wordsToCount):
@@ -45,15 +43,15 @@ class utils:
 
     def classifyTweet(self, phrase):
         words = self.clearTweet(phrase)
-        s = self.initialize()
+        s = self.initializeS()
         for w in words:
             if w in self.positiveWords:
-                self.s[0] = self.s[0] + 1
+                s[0] = s[0] + 1
             elif w in self.neutralWords:
-                self.s[1] = self.s[1] + 1
+                s[1] = s[1] + 1
             elif w in self.negativeWords:
-                self.s[2] = self.s[2] + 1
-        return self.s
+                s[2] = s[2] + 1
+        return s
 
 
 
@@ -63,11 +61,14 @@ class utils:
         r =  alpha * sum(w)
 
         if 0.5 < r <= 1:
-            return f"El tweet tiene una calidad media --> {r}"
+            print("El tweet tiene una calidad media -->")
+            return r
         elif r > 1:
-            return f"El tweet tiene una calidad buena -->  {r}"
+            print("El tweet tiene una calidad buena -->")
+            return r
         else: # r < (0.5)
-            return f"El tweet tiene una calidad mala -->  {r}"
+            print("El tweet tiene una calidad mala -->")
+            return r
 
     def score(self, s):
         v = np.array([1,0,-1]) 
