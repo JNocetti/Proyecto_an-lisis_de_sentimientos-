@@ -65,13 +65,7 @@ class utils:
         n =  len(w)
         alpha = (1 / n)
         r =  alpha * sum(w)
-
-        if 0.5 < r <= 1:
-            return r
-        elif r > 1:
-            return r
-        else: # r < (0.5)
-            return r
+        return r
 
     def score(self, s):
         v = np.array([1,0,-1]) 
