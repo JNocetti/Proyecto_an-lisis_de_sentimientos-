@@ -8,7 +8,7 @@ print("Vector w: ")
 print(w)
 
 
-s = util.classifyTweet('Excelente en su área, su muerte es una enorme pérdida y debería ser luto nacional!!!')
+s = util.classifyTweet('Excelente Excelente Excelente Excelente Excelente ExcelenteExcelente ExcelenteExcelente  Excelente Excelente Excelente l!!!')
 
 print("Vector s: ")
 print(s)
