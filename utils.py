@@ -27,13 +27,13 @@ class utils:
 
             return words
 
-    def initializeW(self): #Inicializa el vector w en 0
+    def initialize(self): #Inicializa el vector w en 0
         w = np.zeros(len(self.wordsToCount))
         return w
         
 
     def stringsCounter(self, phrase): #Devuelve el vector w donde en cada posicion esta la cantidad de veces que aparece la palabra en el tweet.
-        w = self.initializeW()
+        w = self.initialize()
         words = self.clearTweet(phrase)
         for actualWord in words:
             for i, word in enumerate(self.wordsToCount):
@@ -41,18 +41,20 @@ class utils:
                     w[i] += 1
 
         return w
-
+ 
 
     def classifyTweet(self, phrase):
         words = self.clearTweet(phrase)
+        s = self.initialize()
         for w in words:
             if w in self.positiveWords:
                 self.s[0] = self.s[0] + 1
-            if w in self.neutralWords:
+            elif w in self.neutralWords:
                 self.s[1] = self.s[1] + 1
-            if w in self.negativeWords:
+            elif w in self.negativeWords:
                 self.s[2] = self.s[2] + 1
         return self.s
+
 
 
     def avg(self, w):
@@ -63,6 +65,10 @@ class utils:
             return f"El tweet tiene una calidad media --> {r}"
         elif r > 1:
             return f"El tweet tiene una calidad buena -->  {r}"
-        else: # result < (0.5)
+        else: # r < (0.5)
             return f"El tweet tiene una calidad mala -->  {r}"
 
+    def score(self, s):
+        v = np.array([0,1,-1])
+        return s@v
+    
