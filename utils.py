@@ -59,7 +59,8 @@ class utils:
 
     def avg(self, w):
         n =  len(w)
-        r = (1 / n)* sum(w)
+        alpha = (1 / n)
+        r =  alpha * sum(w)
 
         if 0.5 < r <= 1:
             return f"El tweet tiene una calidad media --> {r}"
@@ -69,6 +70,13 @@ class utils:
             return f"El tweet tiene una calidad mala -->  {r}"
 
     def score(self, s):
-        v = np.array([0,1,-1])
-        return s@v
+        v = np.array([1,0,-1]) 
+        score = s@v
+        if score > 0:
+            return f"El tweet es positivo --> {score}"
+        elif score == 0:
+            return f"El tweet es neutral --> {score}"
+        else:
+            return f"El tweet es negativo --> {score}"
+
     

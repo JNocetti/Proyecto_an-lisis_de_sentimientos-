@@ -1,0 +1,30 @@
+TWEET1= "Probablemente de las peores canciones serias que he escuchado y la peor bzrp session de la historia, Peso Pluma en una bzrp session no iba a acabar bien 😔"
+
+TWEET2= ""Es una pena que no sea la 17472937462929372929 vez que sea una session de regetón o trap. Cómo se atreve a hacer algo diferente? Cómo se atreve a poner instrumentos de verdad y no puro auto tune?""
+
+TWEET3= "A mi si me gusto la bzrp session de peso pluma, por que tanto hate? 😔"
+
+TWEET4= "Es un temazo y entre más lo escuchas más adictivo es"
+
+TWEET5= "¿entonces la bzrp session de peso pluma es una canción normal de peso pluma con un par de arreglos? porque la música está grabada con instrumentos reales por la banda y la letra también es de ellos."
+
+TWEET6= "Hablan de mi Peso Pluma como si Quevedo tuviera otro tema que no sea su Session de BZRP 😭😭😭😭"
+
+TWEET7= "La BZRP Session de Peso Pluma llega a 100M en YouTube en menos de un mes
+A este paso, la polémica canción se va a convertir en una de las más vistas de la historia🇲🇽"
+
+TWEET8 = "Bro es que si es famosa en México es seguro que será famosa si somos demasiados, a los que nos gusta nuestra música nacional la apoyamos y ya esta.
+Independientemente del hete del exterior"
+
+TWEET9 = "La bzrp session de Peso Pluma no ha gustado porque es un género muy particular de México al que no estamos acostumbrados.
+
+Pero con la sesión de Arcángel dijimos que Biza estaba empezando a ser repetitivo y aquí ha traído algo diferente, no podemos quejarnos en ese sentido."
+
+TWEET10 = "Soy española, me encantan los corridos tumbados y me hace muy feliz ver todo lo que está consiguiendo Peso Pluma. Un cantante de 10 que transmite unas vibras increíbles 🤍👑
+
+PD: lo llevaba escuchando desde mucho antes de la bzrp session 👀"
+
+Palabras Positivas = ["más","feliz","gusto"]
+Palabras Neutras = ["session"]
+Palabras Negativas = ["odio","problema"]
+
