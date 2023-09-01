@@ -5,20 +5,19 @@ util = utils(['muerte', 'pérdida', 'luto', 'excelente','gran', 'positivo'], ['e
 w = util.stringsCounter('Excelente en su área, su muerte es una enorme pérdida y debería ser luto nacional!!!')
 
 print("Vector w: ")
-for e in w:
-    print(e)
+print(w)
+
 
 s = util.classifyTweet('Excelente en su área, su muerte es una enorme pérdida y debería ser luto nacional!!!')
 
 print("Vector s: ")
-for e in s:
-    print(e)
+print(s)
 
-print("avg de w: ")
+print("avg de w: ") 
 print(util.avg(w))
-print("avg de s: ")
+print("avg de s: ") #Siempre debe ser mayor al avg de w, ya que el vector s tiene 3 elementos y el vector w tiene 6.
 print(util.avg(s))
-print("Score sentimental:")
-print(util.score(s))
+print("Score sentimental:") 
+print(util.score(s))   
       
 
